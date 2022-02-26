@@ -1,8 +1,8 @@
 .circle{
     background: #78bde7;
-    color: #13224b;
-    height: 300px;
-    width: 300px;
+    color: rgb(121, 118, 118);
+    height: 250px;
+    width: 250px;
     border-radius: 50%;
     text-align: center;    
     position: fixed;
@@ -10,13 +10,10 @@
     left: 200px;
     box-shadow:0 0 0 50px#13224b;
     }
-#first{
-    margin-top: 50px;
-}
 h1{
-    margin-top: 40px;
+    margin-top: 70px;
 }
-.spiral{
-    color:#78bde7;
+.outer-circle{
+    color: silver;
 
 }
