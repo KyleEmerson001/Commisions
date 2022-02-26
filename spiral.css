@@ -1,0 +1,20 @@
+body{
+    background: #13224b;
+}
+.circle{
+    background: #78bde7;
+    color: #13224b;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    text-align: center;    
+    position: fixed;
+    top: 100px;
+    left: 200px;
+    }
+h2{
+    margin-top: 50px;
+}
+.spiral{
+    color:#78bde7;
+}
