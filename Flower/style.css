@@ -1,12 +1,12 @@
-[type=radio] { 
+.radioImage{ 
     position: absolute;
     opacity: 0;
     width: 0;
     height: 0;
   }
-  [type=radio] + img {
+  .radioImage + img {
     cursor: pointer;
   }
-  [type=radio]:checked + img {
+  .radioImage:checked + img {
     outline: 4px solid black;
   }
