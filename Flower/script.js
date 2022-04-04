@@ -1,8 +1,20 @@
-if(document.form.radio1.value == "one")
-<img src="free88.gif">
+function check_value()
+{
+    switch(document.test.field.value)
+    {
+        case "one":
+         
+            document.getElementById("main").innerHTML = "<img src='boondockSaints.jpg'>";
+            break;
 
-if(document.form.radio1.value == "two")
-<img src="wobutton.gif">
+        case "two":
 
-if(document.form.radio1.value == "three")
-<img src="but3.gif"></img>
+            document.getElementById("main").innerHTML = "<img src='Seahawks.jpg'>"; 
+            break;
+
+        case "three":
+
+            document.getElementById("main").innerHTML = "<img src='Seahawks.jpg'>"; 
+            break;
+    }
+}
