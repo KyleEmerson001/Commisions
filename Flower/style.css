@@ -1,0 +1,13 @@
+.main{
+    height: 400px;
+    width: 600px;
+    top:10px;
+    position:fixed;
+}
+.options{
+    height: 400px;
+    width: 600px;
+    left:700px;
+    top:10px;
+    position:fixed;
+}

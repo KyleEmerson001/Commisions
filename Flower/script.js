@@ -1,20 +1,20 @@
-function check_value()
+function check_value(fieldvalue)
 {
-    switch(document.test.field.value)
+    switch(fieldvalue)
     {
-        case "one":
+        case 1:
          
-            document.getElementById("main").innerHTML = "<img src='boondockSaints.jpg'>";
+            document.getElementById("front").innerHTML = "<img src='boondockSaints.jpg'>";
             break;
 
-        case "two":
+        case 2:
 
-            document.getElementById("main").innerHTML = "<img src='Seahawks.jpg'>"; 
+            document.getElementById("front").innerHTML = "<img src='Seahawks.jpg'>"; 
             break;
 
-        case "three":
+        case 3:
 
-            document.getElementById("main").innerHTML = "<img src='Seahawks.jpg'>"; 
+            document.getElementById("front").innerHTML = "<img src='Seahawks.jpg'>"; 
             break;
     }
 }

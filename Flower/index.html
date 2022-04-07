@@ -10,8 +10,9 @@
 </head>
 <body>
     <!--Dress Viewer-->
-    <div id ="main">
-        
+    <div class ="main">
+        <div id="front"></div>
+        <div id="back"></div>
     </div>
     <!--Dress Options-->
     <div class ="options">
@@ -19,13 +20,13 @@
             <div class="front">
                 <fieldset>
                 <input type="radio" class="radioImage" id="top1"
-                    name="tops" value="one" onchange='check_value(1)'>
+                    name="tops" value="one" onclick='check_value(1)'>
                 <label for="top1"><img src="https://via.placeholder.com/40x60/0bf/fff&text=A"></label>
                 <input type="radio" class="radioImage" id="top2"
-                    name="tops" value="two" onchange='check_value(2)'>
+                    name="tops" value="two" onclick='check_value(2)'>
                 <label for="top2"><img src="https://via.placeholder.com/40x60/0bf/fff&text=A"></label>
                 <input type="radio" class="radioImage" id="top3"
-                    name="tops" value="three" onchange='check_value(3)'>
+                    name="tops" value="three" onclick='check_value(3)'>
                 <label for="top3"><img src="https://via.placeholder.com/40x60/0bf/fff&text=A"></label>
                 </fieldset>
             </div>
