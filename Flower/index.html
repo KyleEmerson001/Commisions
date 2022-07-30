@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Document</title>
 </head>
 <body>
     <!--Dress Viewer-->
     <div class ="main">
-        <div id="front"></div>
+        <div ><img src="Rack-BK.jpg" name="front" id="front"></div>
         <div id="back"></div>
     </div>
     <!--Dress Options-->
@@ -20,23 +21,23 @@
             <div class="front">
                 <fieldset>
                 <input type="radio" class="radioImage" id="top1"
-                    name="tops" value="one" onclick='check_value(1)'>
+                    name="tops" value="Rack">
                 <label for="top1"><img src="https://via.placeholder.com/40x60/0bf/fff&text=A"></label>
                 <input type="radio" class="radioImage" id="top2"
-                    name="tops" value="two" onclick='check_value(2)'>
+                    name="tops" value="NoRack">
                 <label for="top2"><img src="https://via.placeholder.com/40x60/0bf/fff&text=A"></label>
                 <input type="radio" class="radioImage" id="top3"
-                    name="tops" value="three" onclick='check_value(3)'>
+                    name="tops" value="three">
                 <label for="top3"><img src="https://via.placeholder.com/40x60/0bf/fff&text=A"></label>
                 </fieldset>
             </div>
             <div class="back">
                 <fieldset>
                 <input type="radio" class="radioImage" id="back1"
-                name="backs" value="one">
+                name="backs" value="Rack">
             <label for="back1"><img src="https://via.placeholder.com/40x60/0bf/fff&text=A"></label>
             <input type="radio" class="radioImage" id="back2"
-                name="backs" value="two">
+                name="backs" value="NoRack">
             <label for="back2"><img src="https://via.placeholder.com/40x60/0bf/fff&text=A"></label>
             <input type="radio" class="radioImage" id="back3"
                 name="backs" value="three">
@@ -46,10 +47,10 @@
             <div class="bottom">
                 <fieldset>
                 <input type="radio" class="radioImage" id="bottom1"
-                name="bottoms" value="one">
+                name="bottoms" value="Black">
             <label for="bottom1"><img src="https://via.placeholder.com/40x60/0bf/fff&text=A"></label>
             <input type="radio" class="radioImage" id="bottom2"
-                name="bottoms" value="two">
+                name="bottoms" value="Gray">
             <label for="bottom2"><img src="https://via.placeholder.com/40x60/0bf/fff&text=A"></label>
             <input type="radio" class="radioImage" id="bottom3"
                 name="bottoms" value="three">
@@ -114,5 +115,39 @@
             </div>
         </div>
     </div>
+    <script type = 'text/javascript'>
+    $("input:radio[name=tops], input:radio[name=bottoms]").click(function() { // This handler runs when any of the radio buttons are clicked.
+        var topsValue = $("input:radio[name=tops]:checked").val(); // Find which tops radio button is checked.
+        var bottomsValue = $("input:radio[name=bottoms]:checked").val(); // Find which bottoms radio button is checked.
+    
+        var image_name = ""; // Initialize the image name to blank. We will be appending as we go.
+    
+        switch (topsValue) {
+            case 'Rack':
+                image_name += "Rack"; // Rack was selected, so use that value for the first part of the image.
+                break;
+            case 'NoRack':
+                image_name += "Without-Rack"; // No Rack was selected, so use that value for the first part of the image.
+                break;
+            default:
+                image_name += "Rack"; // Make sure there is a default value, or a broken image could occur!
+                break;
+        }
+    
+        switch (bottomsValue) {
+            case 'Black':
+                image_name += "-BK.jpg"; // Black was selected, so use that value for the last part of the image.
+                break;
+            case 'Gray':
+                image_name += "-GY.jpg"; // Gray was selected, so use that value for the last part of the image.
+                break;
+            default:
+                image_name += "-BK.jpg"; // Make sure there is a default value, or a broken image could occur!
+                break;
+        }
+    
+        $('#front').attr('src', image_name); // Put the image value in the formula image field src.
+    });
+</script>
 </body>
 </html>

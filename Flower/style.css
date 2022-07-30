@@ -11,3 +11,22 @@
     top:10px;
     position:fixed;
 }
+img{
+    max-width: 100%;
+    max-height: 100%;
+    display:block;
+}
+#front{
+    height: 200px;
+    width: 300px;
+    position:fixed;
+}
+#back{
+    height: 200px;
+    width: 300px;
+    left:300px;
+    position:fixed;
+}
+.hidden{
+    
+}
