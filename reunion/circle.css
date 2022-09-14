@@ -19,9 +19,13 @@ h1 {
   --fluid-type-min-screen: 20;
   --fluid-type-max-screen: 60;
 
-  font-size: .4in;
-	
-	color: silver;
+  font-size: calc(
+    (var(--fluid-type-min-size) * 1rem) + (var(--fluid-type-max-size) - var(--fluid-type-min-size)) *
+      (100vw - (var(--fluid-type-min-screen) * 1rem)) /
+      (var(--fluid-type-max-screen) - var(--fluid-type-min-screen))
+  );
+	background: radial-gradient(orchid, slateBlue);
+	color: white;
 	letter-spacing: 1rem;
 	width: var(--size);
 	height: var(--size);
