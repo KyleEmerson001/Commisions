@@ -96,14 +96,14 @@ div{
 #brand{
     position:fixed;
     top: 320px;
-    left: 650px;
-    font-size: 50px;
+    left: 620px;
+    font-size: 70px;
 }
 #desc{
     position:fixed;
-    top: 465px;
-    left: 575px;
-    font-size: 40px;
+    top: 485px;
+    left: 635px;
+    font-size: 30px;
 }
 #item{
     position:fixed;
